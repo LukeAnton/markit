@@ -1,0 +1,169 @@
+@import "../../config";
+
+.stock-details-container {
+  border-top: none;
+  border-bottom: 2px solid $light-grey;
+  margin-bottom: -120px;
+  padding-bottom: 10px;
+  margin-top: 100px;
+  padding-right: 100px;
+  .symbol-name {
+    color: $black;
+    margin-left: 20px;
+    padding-bottom: 3px;
+    .company-name {
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .company-symbol {
+      font-weight: bold;
+    }
+  }
+
+  .price-osc {
+    margin-right: 20px;
+    .price-list {
+      padding-bottom: 3px;
+    }
+  }
+}
+
+.stock-details {
+  padding: 20px;
+  margin-top: 100px;
+  z-index: -1;
+  column-width: 100%;
+  width: 100%;
+  text-align: left;
+}
+
+p {
+  display: inline-block;
+  width: 50%;
+}
+
+.back-to-list {
+  position: fixed;
+  z-index: 10;
+  width: 180px;
+  height: 35px;
+  margin-left: 0;
+  margin-top: -48px;
+
+  background-color: $blue;
+  color: $light-grey;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 15px;
+  border: none;
+  &:hover {
+    z-index: 2;
+    background-color: $light-grey;
+    color: $blue;
+    margin-top: -50px;
+    width: 185px;
+    height: 40px;
+    transition: 0.5s;
+    font-weight: 900;
+    font-size: 17px;
+    border: 1px solid $blue;
+  }
+}
+.mobile-button {
+  position: fixed;
+  z-index: 4;
+  width: 180px;
+  height: 35px;
+  margin-left: 0;
+  margin-top: -48px;
+
+  background-color: $blue;
+  color: $light-grey;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 15px;
+  border: none;
+  &:hover {
+    z-index: 2;
+    background-color: $light-grey;
+    color: $blue;
+    margin-top: -50px;
+    width: 185px;
+    height: 40px;
+    transition: 0.5s;
+    font-weight: 900;
+    font-size: 17px;
+    border: 1px solid $blue;
+  }
+}
+.mobile-button {
+  visibility: hidden;
+  z-index: -4;
+}
+/* -----------------------------MOBILE------------------------------ */
+//mobile
+/* ========--=-======single line========--=-======*/
+/* .stock-details {
+  margin-left: 7%;
+  display: block;
+}
+
+p {
+  display: block;
+} */
+/* ========--=-======single line========--=-======*/
+@include mediaSm {
+  .back-to-list {
+    transition: 5s;
+
+    bottom: -100px;
+    /* display: none; */
+  }
+  .mobile-button {
+    position: fixed;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    width: 100%;
+    border: none;
+    &:hover {
+      padding-top: 20px;
+      padding-bottom: 40px;
+      width: 100%;
+      background-color: $blue;
+      border-left: 100px solid $light-grey;
+      border-right: 100px solid $light-grey;
+    }
+  }
+  .mobile-button-icon {
+    width: 170px;
+    display: inline-block;
+    text-align: center;
+    margin-top: -38px;
+  }
+  .mobile-button {
+    visibility: visible;
+    z-index: 1;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+@include mediaMd {
+  .mobile-button {
+  }
+}
+
+@include mediaLg {
+  .stock-details-container {
+    height: 40px;
+  }
+}
+
+@include mediaXl {
+  .stock-details-container {
+    height: 40px;
+  }
+}
+/* -----------------------------MOBILE------------------------------ */

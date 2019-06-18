@@ -1,0 +1,41 @@
+@import "../../config";
+
+.chart-container {
+  padding: 20px;
+  z-index: -100;
+  .period-buttons {
+    background-color: #45a29e;
+    color: $light-grey;
+    margin-right: 2px;
+    padding: 3px 3%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: none;
+    &:hover {
+      background-color: $light-grey;
+      color: $blue;
+      transition: 0.5s;
+      border: 1px solid rgba(255, 99, 132, 0.6);
+    }
+  }
+  .current-period {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+}
+
+/* -----------------------------MOBILE------------------------------ */
+@include mediaSm {
+}
+
+@include mediaMd {
+}
+
+@include mediaLg {
+}
+
+@include mediaXl {
+}
+
+/* -----------------------------MOBILE------------------------------ */
